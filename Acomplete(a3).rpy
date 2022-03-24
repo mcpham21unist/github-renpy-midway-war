@@ -1,11 +1,3 @@
-define tp = Character("Phó Chỉ Huy", color="c8ffc8")
-#The game start here
-
-label start:
-
-######################################################################
-######################################################################
-
 label a3: #Ra lệnh cho máy bay trinh thám
     scene plane2 with fade
     show thuyenpho at right:
@@ -28,9 +20,9 @@ label choose3:
 label analysis3:
     hide thuyenpho
     menu:
-        "không phải bây giờ":  #####################
+        "không phải bây giờ": 
             jump close3a
-        "Tân công Midway":     #####################
+        "Tân công Midway":     
             jump close3b
         "Đã phân tích xong" :
             jump choose3
