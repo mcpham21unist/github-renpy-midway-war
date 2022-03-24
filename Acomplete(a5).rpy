@@ -33,9 +33,9 @@ label choose5:
 label analysis5:
     hide thuyenpho
     menu:
-        "không phải bây giờ":
+        "Không cho thêm máy bay bảo vệ":
             jump close5a
-        "Tân công Midway":     
+        "Cho thêm máy bay bảo vệ":     
             jump close5b
         "Đã phân tích xong" :
             jump choose5
