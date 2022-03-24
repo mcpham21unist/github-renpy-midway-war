@@ -29,9 +29,9 @@ label analysis3:
     hide thuyenpho
     menu:
         "không phải bây giờ":  #####################
-            jump close1
+            jump close3a
         "Tân công Midway":     #####################
-            jump close2
+            jump close3b
         "Đã phân tích xong" :
             jump choose3
 label free3:
@@ -40,13 +40,13 @@ label free3:
             jump a4
         "Tấn công Midway":
             jump a5
-label close1:
+label close3a:
     show thuyenpho at right:
         size(450,720)
     tp "Đây là thời điểm tấn công theo kế hoạch, thời tiết thuận lợi\"và máy bay đủ tầm, các phi công đều đã chuẩn bị\""
     jump analysis3
 
-label close2:
+label close3b:
     show thuyenpho at right:
         size(450,720)
     tp  "Nếu chúng ta trì hoãn sự tấn công, thì đối phương sẽ có thêm thời gian\chuẩn bị hoặc còn có thể phản công, thời tiết có thể trở nên xấu đi\""
