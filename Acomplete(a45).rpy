@@ -1,3 +1,8 @@
+define tp = Character("Phó Chỉ Huy", color="c8ffc8")
+define noti = Character("Thông Báo", color="9FE2BF")
+define dmr = Character("Damage Report", color="FF7F50")
+label start:
+
 label a45: # tiếp tục phóng máy bay tấn công
     "1010"
     scene ship19 with fade
@@ -11,7 +16,7 @@ label a45: # tiếp tục phóng máy bay tấn công
     "Tin xấu! Đợt tấn công lần này của kẻ địch có máy bay chiến đấu."
     "Quân địch đang dùng chiến thuật di chuyển mới, và rất nhiều máy bay zero của chúng ta đang bị bắn hạ"
     "Điều này khiến cho tất cả máy bay zero đều đã ra ngăn cản máy bay địch, khiến hạm đội chúng ta không hề có máy bay bảo vệ trên đầu"
-        hide thuyenpho
+    hide thuyenpho
     jump analysis45
     jump choose45
 
@@ -28,15 +33,15 @@ label choose45:
 label analysis45:
     hide thuyenpho
     menu:
-        "Gọi máy bay chiến đấu bảo vệ trên đầu": 
+        "Gọi máy bay chiến đấu bảo vệ trên đầu":
             jump close45a
-            "Để tất cả máy bay tập trung tấn công máy bay địch":   
+        "Để tất cả máy bay tập trung tấn công máy bay địch":
             jump close45b
         "Đã phân tích xong" :
             jump choose45
 label free45:
     menu:
-        "Gọi máy bay chiến đấu bảo vệ trên đầu": 
+        "Gọi máy bay chiến đấu bảo vệ trên đầu":
             jump a4647
         "Để tất cả máy bay tập trung tấn công máy bay địch":
             jump a4647
