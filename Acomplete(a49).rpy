@@ -45,7 +45,7 @@ label close49a:
 label close49b:
     show thuyenpho at right:
         size(450,720)
-    "Mình là chỉ huy của cả hạm đội, không có mình là Nhật Bản sẽ\thua trận chiến này, chúng ta cần phải trả thù để bảo toàn được danh vọ\""
+    "Mình là chỉ huy của cả hạm đội, không có mình là Nhật Bản sẽ\thua trận chiến này, chúng ta cần phải trả thù để bảo toàn được danh vọng\""
     jump analysis49
 
 
