@@ -13,11 +13,11 @@ label a12: # Báo cáo tình hình chiến dịch đợt 1
         size(450,720)
     tp "Đô đốc, tiện thể đang trong thời gian an toàn, ngài cần trả lời yêu cầu của Tomonaga\Chúng ta cần 1 đợt nữa mới phá hủy được sân bay ở Midway.\""
     hide thuyenpho
-    hide analysis12
-    hide choose12
+    jump analysis12
+    jump choose12
 
 label choose12:
-     show thuyenpho at right:
+    show thuyenpho at right:
         size(450,720)
     tp "Đô đốc đã có lựa chọn chưa ạ ?"
     hide thuyenpho
@@ -29,9 +29,9 @@ label choose12:
 label analysis12:
     hide thuyenpho
     menu:
-        "Tấn công bằng đội máy bay của Tomonaga":  
+        "Tấn công bằng đội máy bay của Tomonaga":
             jump close12a
-        "Tấn công bằng máy bay dữ trữ": 
+        "Tấn công bằng máy bay dữ trữ":
             jump close12b
         "Đã phân tích xong" :
             jump choose12
@@ -40,7 +40,7 @@ label free12:
     menu:
         "Tấn công bằng đội máy bay của Tomonaga":
             jump a62
-        "Tấn công bằng máy bay dữ trữ": 
+        "Tấn công bằng máy bay dữ trữ":
             jump a13
 
 label close12a:
