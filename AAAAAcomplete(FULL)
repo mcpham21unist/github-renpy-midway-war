@@ -10,14 +10,15 @@ label start: #(0430) đô đốc phóng máy bay về phía trước
         size(1300,720)
     show thuyenpho at right:
         size(450,720)
-    tp "Đô đốc, theo như kế hoạch, bây giờ chúng ta phải phóng\"các máy bay trinh thám để quan sát mặt trận phía trước\""
+    tp "Đô đốc, theo như kế hoạch, bây giờ chúng ta phải phóng\các máy bay trinh thám để quan sát mặt trận phía trước.\""
     menu:
         "Ra lệnh cho máy bay trinh thám":
             jump a3
         "Chúng ta không cần máy bay trinh thám":
             jump a2
 label a3: #Ra lệnh cho máy bay trinh thám
-    scene plane2 with fade
+    scene plane2 with fade:
+        size(1300,720)
     show thuyenpho at right:
         size(450,720)
     tp "Đô đốc, hãy cho máy bay tấn công hải quân Hoa Kì ở Midway nhưu theo kế hoạch."
@@ -53,13 +54,13 @@ label free3:
 label close3a:
     show thuyenpho at right:
         size(450,720)
-    tp "Đây là thời điểm tấn công theo kế hoạch, thời tiết thuận lợi\"và máy bay đủ tầm, các phi công đều đã chuẩn bị\""
+    tp "Đây là thời điểm tấn công theo kế hoạch, thời tiết thuận lợi và máy bay đủ tầm, các phi công đều đã chuẩn bị."
     jump analysis3
 
 label close3b:
     show thuyenpho at right:
         size(450,720)
-    tp  "Nếu chúng ta trì hoãn sự tấn công, thì đối phương sẽ có thêm thời gian\chuẩn bị hoặc còn có thể phản công, thời tiết có thể trở nên xấu đi\""
+    tp "Nếu chúng ta trì hoãn sự tấn công, thì đối phương sẽ có thêm thời gian\chuẩn bị hoặc còn có thể phản công, thời tiết có thể trở nên xấu đi.\""
     jump analysis3
 
 label a2: # Chúng ta không cần máy bay trinh thám (random)
@@ -69,16 +70,16 @@ label a2: # Chúng ta không cần máy bay trinh thám (random)
 
 label a4: # không phải bây giờ (random)
     menu:
-        "Ending 1(fire)":
+        "Ending 1 (fire)":
             jump ending1
 
 label a5: # tấn công Midway
-    scene plane3 with fade
+    "0500!"
+    scene plane3 with fade:
+        size(1300,720)
     "Tuyệt vời, đội máy bay tấn công Midway sẽ có phi công Tomonaga dẫn đầu."
     "Với anh ta, chúng ta có thể yên tâm là Midway sẽ bị vô hiệu hóa."
     "Hãy chúc các phi công trẻ của chúng ta trở lại an toàn."
-    scene black with fade
-    "0500!"
     scene plane with fade:
         size(1300,720)
     "Thông báo! Máy bay trinh thám Tone 4 vì sự cố kĩ thuật đã bị phóng muộn mất 30 phút."
@@ -87,9 +88,9 @@ label a5: # tấn công Midway
     scene ship8 with fade
     show thuyenpho at right:
         size(450,720)
-    tp "Đô đốc! Một máy bay Mĩ Catalina PBY đã phát hiện\ra hạm đội của chúng ta. Chúng ta đã mất yếu tố bất ngờ\""
+    tp "Đô đốc! Một máy bay Mĩ Catalina PBY đã phát hiện\ra hạm đội của chúng ta. Chúng ta đã mất yếu tố bất ngờ.\""
     tp "Tệ hơn nữa, máy bay thả bom của chúng ta chưa đến đảo Midway,\có nghĩa là máy bay Mĩ ở đảo Midway có thể tấn công hạm đội của t bất cứ lúc nào.\""
-    tp "Chúng ta phải làm sao đây"
+    tp "Chúng ta phải làm sao đây."
     hide thuyenpho
     jump analysis5
     jump choose5
@@ -126,14 +127,14 @@ label close5a:
         size(450,720)
     tp "Chúng ta đã có nhiều máy bay đang bay trên đầu để bảo vệ hạm đội."
     tp "Hơn nữa, đối phương không thể phản ứng nhanh đến thế được"
-    tp "Chúng ta sẽ có thừa thời gian để chuẩn bị một khi phát hiện máy bay địch"
+    tp "Chúng ta sẽ có thừa thời gian để chuẩn bị một khi phát hiện máy bay địch."
     jump analysis5
 
 label close5b:
     show thuyenpho at right:
         size(450,720)
-    tp "Có càng nhiều máy bay bảo vệ hạm đội càng an toàn"
-    tp "Nhưng phải dùng các máy bay dự trữ, chúng ta sẽ không sẵn sàng nếu phát hiện hạm đội đối phương"
+    tp "Có càng nhiều máy bay bảo vệ hạm đội càng an toàn."
+    tp "Nhưng phải dùng các máy bay dự trữ, chúng ta sẽ không sẵn sàng nếu phát hiện hạm đội đối phương."
     jump analysis5
 
 label a6: # "0532" cho máy bay bảo vệ trước khi bị tấn công
@@ -142,14 +143,14 @@ label a6: # "0532" cho máy bay bảo vệ trước khi bị tấn công
     show thuyenpho at right:
         size(450,720)
     tp "Báo cáo! Có 1 máy bay ném bom đang tiến tới tàu của chúng ta."
-    tp "Không thể nào"
+    tp "Không thể nào!"
     tp "Máy bay đó đang cháy, mà vẫn nhắm tới chúng ta."
     tp "Cúi đầu xuống!"
-    "Bọn Mĩ không thể dũng cảm như thế này được"
-    "Chắc chắn là do bộ điều khiển của nó đã bị hỏng"
+    "Bọn Mĩ không thể dũng cảm như thế này được."
+    "Chắc chắn là do bộ điều khiển của nó đã bị hỏng."
     "Cái máy bay đó đã đâm trượt tàu của mình, nhưng vài thủy thủ đã bị thương\ Họ đã được đưa đến phòng y tế.\""
     tp "Đô đốc! Phi công Tomonaga sau khi tấn công Midway báo rằng\chúng ta cần 1 đợt tấn công nữa mới vô hiệu hóa được hòn đảo.\""
-    tp "Hơn nữa, máy bay địch đang tiến tới hạm đội"
+    tp "Hơn nữa, máy bay địch đang tiến tới hạm đội."
     hide thuyenpho
     jump analysis6
     jump choose6
@@ -183,23 +184,24 @@ label free6:
 label close6a:
     show thuyenpho at right:
         size(450,720)
-    tp "Đây là một hành động rất nguy hiểm, khi đang bị tấn công, tàu sân bay không thể phóng thêm máy bay mới"
-    tp "Tôi chúc đô đốc may mắn cho cuộc tấn công sắp tới"
+    tp "Đây là một hành động rất nguy hiểm, khi đang bị tấn công, tàu sân bay không thể phóng thêm máy bay mới."
+    tp "Tôi chúc đô đốc may mắn cho cuộc tấn công sắp tới."
     jump analysis6
 
 label close6b:
     show thuyenpho at right:
         size(450,720)
-    tp "Khi đang bị tấn công, các tàu sân bay tuyệt đối không được phóng máy bay mới"
-    tp "Vì điều này sẽ làm giảm sự cơ động của tàu sân bay, và khiến tàu sân bay dễ bị cháy nổ hơn"
+    tp "Khi đang bị tấn công, các tàu sân bay tuyệt đối không được phóng máy bay mới."
+    tp "Vì điều này sẽ làm giảm sự cơ động của tàu sân bay, và khiến tàu sân bay dễ bị cháy nổ hơn."
     jump analysis6
 label a7: # "0532" ko cho thêm máy bay bảo vệ trước khi bị tấn công
     "0700!"
-    scene ship10 with fade
+    scene ship10 with fade:
+        size(1300,720)
     show thuyenpho at right:
         size(450,720)
     tp "Đô đốc! Phi công Tomonaga sau khi tấn công Midway báo rằng\chúng ta cần 1 đợt tấn công nữa mới vô hiệu hóa được hòn đảo.\""
-    tp "Hơn nữa, máy bay địch đang tiến tới hạm đội"
+    tp "Hơn nữa, máy bay địch đang tiến tới hạm đội."
     hide thuyenpho
     jump analysis7
     jump choose7
@@ -233,8 +235,8 @@ label free7:
 label close7a:
     show thuyenpho at right:
         size(450,720)
-    tp "Đây là một hành động rất nguy hiểm, khi đang bị tấn công, tàu sân bay không thể phóng thêm máy bay mới"
-    tp "Tôi chúc đô đốc may mắn cho cuộc tấn công sắp tới"
+    tp "Đây là một hành động rất nguy hiểm, khi đang bị tấn công, tàu sân bay không thể phóng thêm máy bay mới."
+    tp "Tôi chúc đô đốc may mắn cho cuộc tấn công sắp tới."
     jump analysis7
 
 label close7b:
@@ -246,7 +248,8 @@ label close7b:
 
 label a8: # "0700" né máy bay địch, không phóng máy bay ta (lần 1)
     "0700!"
-    scene deakagi1 with fade
+    scene deakagi1 with fade:
+        size(1300,720)
     menu:
         "Né máy bay địch không phóng máy bay ta":
             jump a10
@@ -257,27 +260,30 @@ label a9: # "0700" phóng máy bay bảo vệ
             jump ending4
 
 label a10: # "Some time later" sử dụng súng phòng không lần 1
-    "Some time later"
-    scene deakagi2 with fade
+    "Some time later!"
+    scene deakagi2 with fade:
+        size(1300,720)
     show thuyenpho at right:
         size(450,720)
-    tp "Cẩn thận đô đốc! 4 máy bay thả ngư lôi đang ở bên phía cảng"
+    tp "Cẩn thận đô đốc! 4 máy bay thả ngư lôi đang ở bên phía cảng."
     menu:
         "Sử dụng súng phòng không":
             jump a11
 label a11: # Sử dụng súng phòng không lần 2
-    scene atakagi1 with fade
+    scene atakagi1 with fade:
+        size(1300,720)
     menu:
         "Sử dụng súng phòng không lần 2":
             jump a12
 label a12: # Báo cáo tình hình chiến dịch đợt 1
     scene phongdochoi with fade:
         size(1300,720)
-    dmr "Chúng ta đã mất 2 máy bay Zero"
-    dmr "Các con tàu còn lại"
+    dmr "Chúng ta đã mất 2 máy bay Zero."
+    dmr "Các con tàu còn lại."
     dmr "Trên bầu trời đã hết máy bay địch, cuộc tấn công của địch đã kết thúc."
     dmr "Và đến bây giờ vẫn chưa có thông báo gì từ máy bay trinh thám."
-    scene black with fade
+    scene black with fade:
+        size(1300,720)
     "0715!"
     scene phongdochoi with fade:
         size(1300,720)
@@ -287,7 +293,7 @@ label a12: # Báo cáo tình hình chiến dịch đợt 1
     hide thuyenpho
     jump analysis12
     jump choose12
-
+    
 label choose12:
     show thuyenpho at right:
         size(450,720)
@@ -311,25 +317,25 @@ label analysis12:
 label free12:
     menu:
         "Tấn công bằng đội máy bay của Tomonaga":
+        tp "Rõ!"
             jump a62
         "Tấn công bằng máy bay dữ trữ":
+        tp "Rõ!"
             jump a13
 
 label close12a:
     show thuyenpho at right:
         size(450,720)
-    tp "Đợi đội máy bay của Tomonaga quay trở lại, tiếp nhiên liệu và vũ khí, rồi quay lại tấn công"
-    tp "Lựa chọn này sẽ tốn rất nhiều thời gian, quân Mĩ có thể\sửa lại sân bay và chuẩn bị phòng thủ, sẽ dẫn đến thêm mạng chết\""
-    tp "Rõ"
+    tp "Đợi đội máy bay của Tomonaga quay trở lại, tiếp nhiên liệu và vũ khí, rồi quay lại tấn công."
+    tp "Lựa chọn này sẽ tốn rất nhiều thời gian, quân Mĩ có thể\sửa lại sân bay và chuẩn bị phòng thủ, sẽ dẫn đến thêm mạng chết.\""
     jump analysis12
 
 label close12b:
     show thuyenpho at right:
         size(450,720)
-    tp "Các máy bay thả ngư lôi dự trữ sẽ thay vũ khí để thả bom. Những máy bay này đang không làm gì"
-    tp "Nhưng mình sẽ không có máy bay dự bị trong trường hợp phát hiện tàu sân bay địch"
-    tp "Máy bay vừa nãy suýt đâm vào tàu chứng minh rằng midway vẫn là mối đe dọa"
-    tp "Rõ"
+    tp "Các máy bay thả ngư lôi dự trữ sẽ thay vũ khí để thả bom. Những máy bay này đang không làm gì."
+    tp "Nhưng mình sẽ không có máy bay dự bị trong trường hợp phát hiện tàu sân bay địch."
+    tp "Máy bay vừa nãy suýt đâm vào tàu chứng minh rằng midway vẫn là mối đe dọa."
     jump analysis12
 
 # Bắt đầu từ chỗ này sẽ phân tách thành 2 nhánh lớn
@@ -338,9 +344,13 @@ label close12b:
 # dài vcl thề
 #1.1
 label a13: # "0715" tấn công bằng máy bay dự trữ
-    scene plane13 with fade
+    scene plane13 with fade:
+        size(1300,720)
     "Thay đổi các máy bay thả ngư lôi ở tàu Akagi và Kaga, việc này dự định sẽ tốn 1 tiếng rưỡi."
+    scene black with fade:
+        size(1300,720)
     "0745!"
+    scene plane13 with fade:
     noti "Thông báo! Máy bay Tone 4, cái mà bị trễ lúc trước, đã phát hiện “10 tàu đối phương”."
     hide thuyenpho
     jump analysis13
@@ -374,7 +384,7 @@ label free13:
 label close13a:
     show thuyenpho at right:
         size(450,720)
-    tp "Chúng ta phải tấn công mọi tàu đối phương ở xung quanh vùng này để bảo vệ hạm đội trước khi quá muộn"
+    tp "Chúng ta phải tấn công mọi tàu đối phương ở xung quanh vùng này để bảo vệ hạm đội trước khi quá muộn."
     jump analysis13
 
 label close13b:
@@ -384,10 +394,10 @@ label close13b:
     jump analysis13
 label a14: # Dừng việc thay đổi vũ khí
     scene plane14 with fade
-    "1 điều tôi thấy lạ về thông báo này của Tone 4, \theo đường bay chỉ định, Tone 4 không thể đi qua hạm đội đối phương được\""
+    "1 điều tôi thấy lạ về thông báo này của Tone 4, \theo đường bay chỉ định, Tone 4 không thể đi qua hạm đội đối phương được.\""
     "Nghĩa là Tone 4 đi sai đường, hoặc là vị trí của hạm đội bị thông báo sai."
     "Hơn nữa, “10 tàu đối phương” có thể có tàu sân bay, hoặc chỉ là tàu khu trực nhỏ."
-    "Một tháng trước, tại trận đấu Biển San Hô, đô đốc Takagi đã\tấn công nhầm tàu khu trực của Mĩ thay vì tàu sân bay Mĩ. Chúng ta không thể làm lại lỗi lầm đó\""
+    "Một tháng trước, tại trận đấu Biển San Hô, đô đốc Takagi đã\tấn công nhầm tàu khu trực của Mĩ thay vì tàu sân bay Mĩ. Chúng ta không thể làm lại lỗi lầm đó.\""
     "Ngoài ra, tại sao lại có 1 hạm đội 240 dặm Bắc của Midway?\Không có lí do gì để có 1 hạm đội ở đây trừ khi đó là hạm đội tàu sân bay.\""
     "Quan trọng hơn, theo báo cáo, hạm đội đối phương đang đi vào vùng có gió.\Bình thường tàu sân bay cần có gió để phóng máy bay.\""
     menu:
@@ -452,7 +462,7 @@ label free1819:
 label close1819a:
     show thuyenpho at right:
         size(450,720)
-    "Danh tính của đối phương vẫn chưa biết, còn vị trí thì còn khả nghi"
+    "Danh tính của đối phương vẫn chưa biết, còn vị trí thì còn khả nghi."
     "1 vài máy bay dự trữ vừa thay đổi vũ khí nên chỉ còn 64/78 máy bay tấn công được."
     "Nhưng trong chiến tranh tàu sân bay, ai tấn công trước người đấy thắng."
     jump analysis1819
@@ -460,7 +470,7 @@ label close1819a:
 label close1819b:
     show thuyenpho at right:
         size(450,720)
-    "Không máy bay nào của Tomonaga phải bị mất, có đủ thời gian để\chuẩn bị vũ khí trên máy bay nên có thể tấn công với cả 78 máy ba\""
+    "Không máy bay nào của Tomonaga phải bị mất, có đủ thời gian để\Chuẩn bị vũ khí trên máy bay nên có thể tấn công với cả 78 máy ba.\""
     jump analysis1819
 
 label close1819c:
@@ -480,17 +490,19 @@ label a2122: # phóng máy bay tấn công ngay + đợi thời gian nghĩ thêm
 
 label a161723: # suy đoán tàu sân bay đối phương + chỉ là tàu bình thường thôi + phóng máy bay sau khi tấn công hạm đội đối phương (sau khi Tomonaga hạ)
     "0753!"
-    scene hiryuu1 with fade
+    scene hiryuu1 with fade:
+        size(1300,720)
     show thuyenpho at right:
         size(450,720)
-    tp "Đô đốc! Máy bay địch xuất hiện ở phía đông nam"
+    tp "Đô đốc! Máy bay địch xuất hiện ở phía đông nam."
     menu:
         "Tất cả chuẩn bị súng phòng không":
             jump a24
 label a26: # 0753 tất cả chuẩn bị súng phòng không
     "0810!"
-    scene hiryuu2 with fade
-    "Tất cả máy bay địch đã nhắm vào con tàu Hiryuu của mình"
+    scene hiryuu2 with fade:
+        size(1300,720)
+    "Tất cả máy bay địch đã nhắm vào con tàu Hiryuu của mình."
     "Có vẻ như chúng đang thả bom lươn, thay vì chĩa thẳng xuống."
     "Rõ ràng bọn Mĩ không có chút kinh nghiệm."
     menu:
@@ -499,8 +511,9 @@ label a26: # 0753 tất cả chuẩn bị súng phòng không
 
 label a24: # 0753 tất cả chuẩn bị súng phòng không
     "0810!"
-    scene hiryuu2 with fade
-    "Tất cả máy bay địch đã nhắm vào con tàu Hiryuu của mình"
+    scene hiryuu2 with fade:
+        size(1300,720)
+    "Tất cả máy bay địch đã nhắm vào con tàu Hiryuu của mình."
     "Có vẻ như chúng đang thả bom lươn, thay vì chĩa thẳng xuống."
     "Rõ ràng bọn Mĩ không có chút kinh nghiệm."
     menu:
@@ -541,9 +554,9 @@ label free27:
 label close27a:
     show thuyenpho at right:
         size(450,720)
-    tp "Thuyền trưởng, vì cuộc tấn công này, chúng ta đã không thể phóng máy bay tấn công đối phương"
+    tp "Thuyền trưởng, vì cuộc tấn công này, chúng ta đã không thể phóng máy bay tấn công đối phương."
     tp "Tại vì bây giờ đã quá 0800, tấn công đối phương bây giờ\sẽ khiến chúng ta phải hy sinh đa số máy bay trong đội của Tomonaga.\""
-    tp "Thuyền trưởng có muốn đổi quyết định không?"
+    tp "Thuyền trưởng có muốn đổi quyết định không ?"
     "danh tính của đối phương vẫn chưa biết, vị trí đối phương thì còn khả nghi."
     "1 vài máy bay dự trũ vừa thay đổi vũ khí nên chỉ còn 64/78 máy bay tấn công được."
     "Nhưng trong chiến tranh tàu sân bay, ai tấn công trước người đấy thắng."
@@ -553,13 +566,14 @@ label close27a:
 label close27b:
     show thuyenpho at right:
         size(450,720)
-    "Không máy bay nào của Tomonaga phải bị mất"
+    "Không máy bay nào của Tomonaga phải bị mất."
     "có đủ thời gian để chuẩn bị vũ khí trên máy bay nên có thể tấn công với cả 78 máy bay."
     jump analysis27
 
 label a252829: # phóng máy bay sau khi Tomohaga hạ cánh + phóng máy bay tấn công ngay lập tức + 0810 Báo cáo tình hình
-    scene plane6 with fade
-    noti "Phát hiện máy bay thả bom đối phương trên cao 200 dặm"
+    scene plane6 with fade:
+        size(1300,720)
+    noti "Phát hiện máy bay thả bom đối phương trên cao 200 dặm."
     "Với độ cao này, súng phòng không của chúng ta không có tác dụng gì cả."
     menu:
         "Chuẩn bị né":
@@ -568,11 +582,11 @@ label a30: # Chuẩn bị né
     "0820!"
     scene soryuu with fade:
         size(1300,720)
-    "Bọn chúng đã tấn công Soryuu, Hiryuu và Akagi"
-    "Nhưng ở trên độ cao đó, độ chính xác của đối phương cũng bị giảm"
-    "Hạm đội của chúng ta không bị sát thương nào"
+    "Bọn chúng đã tấn công Soryuu, Hiryuu và Akagi."
+    "Nhưng ở trên độ cao đó, độ chính xác của đối phương cũng bị giảm."
+    "Hạm đội của chúng ta không bị sát thương nào."
     noti "Thông báo! Thông tin đưa về từ máy bay trinh sát Tone 4"
-    "Có lẽ chiếc tàu sân bay kia đi theo hạm đội chúng"
+    "Có lẽ chiếc tàu sân bay kia đi theo hạm đội chúng."
     hide thuyenpho
     jump analysis30
     jump choose30
@@ -608,39 +622,44 @@ label close30a:
     "Danh tính đối phương đã được xác nhận."
     "Với tàu sân bay, đối phương có thể tấn công bất cứ lúc nào."
     "Chúng ta phải tấn công trước! Nhưng lưu ý, tấn công lúc này sẽ chắc chắn mất hết 97 máy bay của đội Tomonaga."
-    "Và chúng ta sẽ không có máy bay tiêm kích bảo kê máy bay thả bom vì chúng đã được sử dụng để bảo vệ hạm đội"
+    "Và chúng ta sẽ không có máy bay tiêm kích bảo kê máy bay thả bom vì chúng đã được sử dụng để bảo vệ hạm đội."
     "thế nên tỉ lệ chúng ta có thể tấn công đối phương an toàn là rất thấp."
     jump analysis30
 
 label close30b:
     show thuyenpho at right:
         size(450,720)
-    "Không máy bay nào của Tomonaga phải bị mất"
+    "Không máy bay nào của Tomonaga phải bị mất."
     "có đủ thời gian để chuẩn bị vũ khí trên máy bay nên có thể tấn công với cả 78 máy bay."
     jump analysis30
 
 label a3132: # phóng máy bay sau khi Tomohaga hạ cánh + phóng máy bay tấn công đối phương ngay lập tức
     "0825!"
-    scene ship12 with fade
+    scene ship12 with fade:
+        size(1300,720)
     noti "Thông báo! Phát hiện ống nhòm của tàu ngầm đối phương!"
     "Tàu khu trục Arashi đã được cử để đi săn nó."
-    scene black with fade
+    scene black with fade:
+        size(1300,720)
     "0827!"
-    scene ship13 with fade
-    noti "Phát hiện máy bay thả bom địch ở phía Đông Nam"
+    scene ship13 with fade:
+        size(1300,720)
+    noti "Phát hiện máy bay thả bom địch ở phía Đông Nam."
     menu:
         "Tất cả chuẩn bị súng phòng không":
             jump a33
 
 label a33: # 0827 tất cả chuẩn bị súng phòng không
     "0839!"
-    scene ship19 with fade
+    scene ship19 with fade:
+        size(1300,720)
     menu:
         "Báo cáo tình hình":
             jump a34
 
 label a34: # 0839 báo cáo tình hình
-    scene plane11 with fade
+    scene plane11 with fade:
+        size(1300,720)
     hide thuyenpho
     jump analysis34
     jump choose34
@@ -676,7 +695,7 @@ label close34a:
     show thuyenpho at right:
         size(450,720)
     "Con tàu ngầm đó vẫn là mối đe dọa lớn, một ngư lôi từ tàu ngầm đó có thể đánh chìm cả tàu sân bay."
-    " Arashi sẽ trở lại sau khi tiêu diệt được tàu  ngầm hoặc là khi nó đi xa quá"
+    " Arashi sẽ trở lại sau khi tiêu diệt được tàu  ngầm hoặc là khi nó đi xa quá."
     jump analysis34
 
 label close34b:
@@ -727,16 +746,16 @@ label close35a:
     "Với tàu sân bay, địch có thể tấn công bất cứ lúc nào."
     "Chúng ta phải tấn công trước!"
     "Nhưng lưu ý, tấn công lúc này sẽ chắc chắn mất hết 97 máy bay của đội Tomonaga."
-    "Và chúng ta sẽ không có máy bay tiêm kích bảo vệ máy bay thả bom vì chúng đã được sử dụng để bảo vệ hạm đội"
+    "Và chúng ta sẽ không có máy bay tiêm kích bảo vệ máy bay thả bom vì chúng đã được sử dụng để bảo vệ hạm đội."
     "Thế nên tỉ lệ chúng ta có thể tấn công đối phương an toàn là rất thấp."
     jump analysis35
 
 label close35b:
     show thuyenpho at right:
         size(450,720)
-    "Đội máy bay của Tomonaga đã quay trở lại an toàn"
+    "Đội máy bay của Tomonaga đã quay trở lại an toàn."
     "chúng ta không thể nhìn họ hy sinh máy bay được. "
-    "Chúng ta còn thời gian để nạp nhiên liệu và đạn và tấn công sau khi đón họ trở về"
+    "Chúng ta còn thời gian để nạp nhiên liệu và đạn và tấn công sau khi đón họ trở về."
     jump analysis35
 
 label a37: # sau khi Tomohaga hạ cánh
@@ -788,8 +807,9 @@ label close37b:
     jump analysis37
 
 label a363839: # tấn công hạm đội đối phương + tấn công midway + phóng máy bay tấn công hạm đội đối phương ngay lập tức
-    "Chúng ta chỉ cần 45 phút là sẽ phóng được hàng loạt máy bay hùng mạnh"
-    "0918"
+    "0918!"
+    "Chúng ta chỉ cần 45 phút là sẽ phóng được hàng loạt máy bay hùng mạnh."
+    "0918!"
     scene ship16 with fade
     noti "Thông báo, chúng ta đang bị tấn công bởi máy bay thả ngư lôi Mĩ từ phía Bắc."
     menu:
@@ -808,7 +828,7 @@ label a41: # Báo cáo tình hình
     "0937!"
     scene phongdochoi with fade:
         size(1300,720)
-    dmr "Trong số 15 máy bay đối phương tấn công, chỉ có 3 cái đến gần được con tàu Soryuu của chúng ta, và chỉ có 1 máy bay địch bắn được ngư lôi, nhưng mà trượt"
+    dmr "Trong số 15 máy bay đối phương tấn công, chỉ có 3 cái đến gần được con tàu Soryuu của chúng ta, và chỉ có 1 máy bay địch bắn được ngư lôi, nhưng mà trượt."
     menu:
         "Tiếp tục phóng máy bay tấn công":
             jump a42
@@ -838,7 +858,7 @@ label a44: # Báo cáo tình hình
         size(1300,720)
     show thuyenpho at right:
         size(450,720)
-    tp "Bọn chúng đã tấn công con tàu Kaga của chúng ta, nhưng không phát nào trúng, chúng ta chỉ bị mất 1 từ máy bay Zero"
+    tp "Bọn chúng đã tấn công con tàu Kaga của chúng ta, nhưng không phát nào trúng, chúng ta chỉ bị mất 1 từ máy bay Zero."
     menu:
         "Tiếp tục phóng máy bay tấn công":
             jump a45
@@ -854,8 +874,8 @@ label a45: # tiếp tục phóng máy bay tấn công
     "1020"
     scene ship19 with fade
     "Tin xấu! Đợt tấn công lần này của kẻ địch có máy bay chiến đấu."
-    "Quân địch đang dùng chiến thuật di chuyển mới, và rất nhiều máy bay zero của chúng ta đang bị bắn hạ"
-    "Điều này khiến cho tất cả máy bay zero đều đã ra ngăn cản máy bay địch, khiến hạm đội chúng ta không hề có máy bay bảo vệ trên đầu"
+    "Quân địch đang dùng chiến thuật di chuyển mới, và rất nhiều máy bay zero của chúng ta đang bị bắn hạ."
+    "Điều này khiến cho tất cả máy bay zero đều đã ra ngăn cản máy bay địch, khiến hạm đội chúng ta không hề có máy bay bảo vệ trên đầu."
     hide thuyenpho
     jump analysis45
     jump choose45
@@ -898,43 +918,52 @@ label close45b:
     jump analysis45
 
 label a4647: # gọi máy bay quay lại bảo vệ + để tất cả máy bay tập trung tấn công máy bay địch
-    scene atakagi1 with fade
+    scene atakagi1 with fade:
+        size(1300,720)
     noti " Thông báo! Gần 50 máy bay thả bom Mĩ đang tiến tới từ cả phía Bắc và phía Nam,\chúng nó đã tiến tới quá gần mà không bị phát hiện và đang bắt đầu tấn công hạm đội của ta\""
-    "Chúng ta không hề có máy bay nào sẵn sàng bảo vệ cả"
+    "Chúng ta không hề có máy bay nào sẵn sàng bảo vệ cả."
+    scene black with fade:
+        size(1300,720)
     "Liệu đây là cái kết..."
-    scene black with fade
     "1022-1026"
-    scene ship15 with fade
-    tp "Đô đốc, nhìn kìa, Kaga vừa bị trúng 4 quả bom"
+    scene ship15 with fade:
+        size(1300,720)
+    tp "Đô đốc, nhìn kìa, Kaga vừa bị trúng 4 quả bom."
     "Cô ấy đang cháy"
-    scene atakagi2 with fade
-    tp "Đô đốc! Bên kia, Soryuu cũng đang bị tấn công"
-    "Boom!"
+    scene atakagi2 with fade:
+        size(1300,720)
+    "BOOM!"
+    tp "Đô đốc! Bên kia, Soryuu cũng đang bị tấn công."
     "Cô ấy cũng đang bị nổ từ bên trong! Lửa ở khắp nơi."
     "Chỉ còn chúng ta và Hiryuu thôi"
     noti "Thông báo, 3 máy bay thả bom đối phương đã thay đổi hướng, chúng đang ngắm về hướng chúng ta"
-    scene atakagi3 with fade
-    "Boom! (1 quả bom đã rơi trượt tàu Akagi)"
-    scene deakagi2 with fade
-    "Boom! ( quả bom thứ 2 đã rơi trượt tàu Akagi)"
-    scene plane14 with fade
-    "Còn máy bay cuối cùng đang nhắm thẳng tới sàn bay của chúng ta!"
+    scene atakagi3 with fade:
+        size(1300,720)
+    "BOOM! (1 quả bom đã rơi trượt tàu Akagi)"
+    scene deakagi2 with fade:
+        size(1300,720)
+    "BOOM! ( quả bom thứ 2 đã rơi trượt tàu Akagi)"
+    scene plane14 with fade:
+        size(1300,720)
     "BOOM!"
-    scene black with fade
-    "1026"
+    "Còn máy bay cuối cùng đang nhắm thẳng tới sàn bay của chúng ta!"
+    scene black with fade:
+        size(1300,720)
+    "1026!"
     menu:
-        "báo cáo tình hình":
+        "Báo cáo tình hình":
             jump a49
 
 label a49: # Báo cáo tình hình
-    scene plane15 with fade
+    scene plane15 with fade:
+        size(1300,720)
     show thuyenpho at right:
         size(480,720)
     tp "Tất cả tàu sân bay của chúng ta đều có vũ khí, máy bay và nhiên liệu ở dưới sàn bay."
-    tp "Và chỉ với 1 quả bom, nó đã khiến cả con tàu Akagi bị cháy"
+    tp "Và chỉ với 1 quả bom, nó đã khiến cả con tàu Akagi bị cháy."
     tp "Số phận của Kaga, Soryuu đều cũng thế."
     tp "Chúng ta chỉ còn Hiryuu đã né được ngư lôi từ máy bay địch và còn hoạt động được"
-    tp "Đô đốc, con tàu Akagi không thể bị cứu được nữa.\Thuyền trưởng hãy chuyển sang con tàu tuần dương nagara để tiếp tục chỉ huy trận chiến\""
+    tp "Đô đốc, con tàu Akagi không thể bị cứu được nữa.\Thuyền trưởng hãy chuyển sang con tàu tuần dương nagara để tiếp tục chỉ huy trận chiến.\""
     hide thuyenpho
     jump analysis49
     jump choose49
@@ -967,13 +996,13 @@ label free49:
 label close49a:
     show thuyenpho at right:
         size(450,720)
-    "Thuyền trưởng có trách nghiệm bảo vệ con tàu và thủy thủ của mình, khi tàu chìm,\thuyển trưởng có truyền thống ở lại trên con tàu đang chìm để bảo vệ danh vọng của mình\""
+    "Thuyền trưởng có trách nghiệm bảo vệ con tàu và thủy thủ của mình, khi tàu chìm,\thuyển trưởng có truyền thống ở lại trên con tàu đang chìm để bảo vệ danh vọng của mình.\""
     jump analysis49
 
 label close49b:
     show thuyenpho at right:
         size(450,720)
-    "Mình là chỉ huy của cả hạm đội, không có mình là Nhật Bản sẽ\thua trận chiến này, chúng ta cần phải trả thù để bảo toàn được danh vọng\""
+    "Mình là chỉ huy của cả hạm đội, không có mình là Nhật Bản sẽ\thua trận chiến này, chúng ta cần phải trả thù để bảo toàn được danh vọng.\""
     jump analysis49
 
 
@@ -983,7 +1012,7 @@ label a51a:  #ending die 2
             jump ending2
 
 label a50: # tháo chạy bằng xuồng và chỉ huy tiếp từ tàu Nagara
-    scene ship5 with fade:
+    scene phongdochoi with fade:
         size(1300,720)
     show thuyenpho at right:
         size(480,720)
@@ -994,8 +1023,8 @@ label a50: # tháo chạy bằng xuồng và chỉ huy tiếp từ tàu Nagara
     tp "Chúng ta có lệnh từ đô đốc Yamamoto, chỉ huy toàn bộ hải quân Nhật Bản."
     tp "Ông ấy muốn chúng ta tìm và tấn công hạm đội Mỹ trực tiếp\ Ông ấy đã ra lệnh cho một số chiến hạm làm viện trợ cho chúng ta.\""
     tp "Hơn nữa, 2 tàu sân bay hạng nhẹ Junyo và Ryujo cũng sẽ đến tiếp viện cho chúng ta."
-    tp "Nhưng tất cả viện trợ này đang ở rất xa chúng ta và sẽ không có thể đến kịp thời gian được"
-    tp "Tại vì hạm đội đối phương có vẻ như đang đi theo hướng Đông Nam,\ và đang tăng khoảng cách với mình. Thế nên chỉ có Hiryuu là có thể tấn công thôi\""
+    tp "Nhưng tất cả viện trợ này đang ở rất xa chúng ta và sẽ không có thể đến kịp thời gian được."
+    tp "Tại vì hạm đội đối phương có vẻ như đang đi theo hướng Đông Nam,\ và đang tăng khoảng cách với mình. Thế nên chỉ có Hiryuu là có thể tấn công thôi.\""
     tp "Cả tương lai của Nhật Bản đang đặt trên vai của thuyền trưởng."
     hide thuyenpho
     jump analysis50
@@ -1035,8 +1064,8 @@ label close50a:
 label close50b:
     show thuyenpho at right:
         size(450,720)
-    "Lựa chọn duy nhất mà mọi người Nhật Bản có thể chọn, chúng ta vẫn còn có cơ hội"
-    "để lật đảo cuộc chiến này. Kẻ địch đã chạy ra ngoài tâm của chúng ta,"
+    "Lựa chọn duy nhất mà mọi người Nhật Bản có thể chọn, chúng ta vẫn còn có cơ hội."
+    "để lật đảo cuộc chiến này. Kẻ địch đã chạy ra ngoài tâm của chúng ta."
     "nhưng chúng ta có thể đuổi kịp trong khoảng thời gian ngắn."
     jump analysis50
 
@@ -1051,8 +1080,11 @@ label a51: # đuổi theo
     show thuyenpho at right:
         size(480,720)
     tp "Tuyệt vời! Để tôi bảo các phi công của chúng ta chuẩn bị."
-    show black with fade
+    show black with fade:
+        size(1300,720)
     "1054!"
+    scene ship12 with fade:
+        size(1300,720)
     "Chúng ta đã đuổi kịp hạm đội đối phương"
     menu:
         "Phóng máy bay phản công":
@@ -1072,7 +1104,8 @@ label a55:  # rút lui
             jump ending1
 
 label a54: # tiếp tục tấn công
-    scene ship7 with fade
+    scene ship7 with fade:
+        size(1300,720)
     menu:
         "Đi hướng Tây Bắc":
             jump a56
@@ -1085,7 +1118,8 @@ label a56:  # đi hướng tây bắc
             jump ending4
 
 label a57: # đi hướng đông nam
-    scene ship5 with fade
+    scene ship5 with fade:
+        size(1300,720)
     menu:
         "Rẽ trái khẩn cấp":
             jump a5859
@@ -1102,7 +1136,7 @@ label a60: # báo cáo tình hình
         size(1300,720)
     show thuyenpho at right:
         size(480,720)
-    tp "Thông báo từ đội máy bay vừa quay trở lại"
+    tp "Thông báo từ đội máy bay vừa quay trở lại."
     "Chỉ có 5/13 máy bay thả bom Val trở lại, 1/4 máy bay zero trở lại. "
     "Nếu tiếp tục như thế này, chúng ta có thể sẽ hết sạch máy bay cho đến tối mất."
     tp "Đổi lại, chúng ta chỉ bắt hạ được 1 máy bay Wildcat từ Mĩ."
@@ -1121,7 +1155,8 @@ label a61: # rút lui
 # Nhánh chính thứ hai
 label a62: # 0715 tấn công bằng đội máy bay của Tomonaga
     "0715!"
-    scene plane13 with fade
+    scene plane13 with fade:
+        size(1300,720)
     menu:
         "Suy đoán tàu sân bay đối phương":
             jump a6364
@@ -1129,7 +1164,8 @@ label a62: # 0715 tấn công bằng đội máy bay của Tomonaga
             jump a6364
 
 label a6364: # suy đoán tàu sân bay đối phương + chỉ là tàu bình thường
-    scene plane14 with fade
+    scene plane14 with fade:
+        size(1300,720)
     "1 điều tôi thấy lạ về thông báo này của Tone 4, \theo đường bay chỉ định, Tone 4 không thể đi qua hạm đội đối phương được\""
     "Nghĩa là Tone 4 đi sai đường, hoặc là vị trí của hạm đội bị thông báo sai."
     "Hơn nữa, “10 tàu đối phương” có thể có tàu sân bay, hoặc chỉ là tàu khu trực nhỏ."
@@ -1201,7 +1237,8 @@ label a6667: # phóng máy bay tấn công ngay + đợi thời gian nghĩ thêm
 
 label a68:  # phóng máy bay tấn công hạm đội đối phương sau khi Tomonaga hạ
     "0753!"
-    scene hiryuu1 with fade
+    scene hiryuu1 with fade:
+        size(1300,720)
     show thuyenpho at right:
         size(450,720)
     tp "Đô đốc! Máy bay địch xuất hiện ở phía đông nam"
@@ -1211,7 +1248,8 @@ label a68:  # phóng máy bay tấn công hạm đội đối phương sau khi T
 ###################################################################### oánh dấu chủ quyền
 label a69: # 0753 tất cả chuẩn bị súng phòng không
     "0810!"
-    scene hiryuu2 with fade
+    scene hiryuu2 with fade:
+        size(1300,720)
     "Tất cả máy bay địch đã nhắm vào con tàu Hiryuu của mình"
     "Có vẻ như chúng đang thả bom lươn, thay vì chĩa thẳng xuống."
     "Rõ ràng bọn Mĩ không có chút kinh nghiệm."
@@ -1221,7 +1259,8 @@ label a69: # 0753 tất cả chuẩn bị súng phòng không
 
 label a70: # 0753 tất cả chuẩn bị súng phòng không
     "0810!"
-    scene hiryuu2 with fade
+    scene hiryuu2 with fade:
+        size(1300,720)
     "Tất cả máy bay địch đã nhắm vào con tàu Hiryuu của mình"
     "Có vẻ như chúng đang thả bom lươn, thay vì chĩa thẳng xuống."
     "Rõ ràng bọn Mĩ không có chút kinh nghiệm."
@@ -1230,7 +1269,8 @@ label a70: # 0753 tất cả chuẩn bị súng phòng không
             jump a727374
 
 label a71: # 0810 Báo cáo tình hình
-    scene atakagi1 with fade
+    scene atakagi1 with fade:
+        size(1300,720)
     dmr "Hạm đội của chúng ta không có tổn thương gì.\1 máy bay zero đã bị mất, và đã bắn hạ được gần chục máy bay đối phương.\""
     hide thuyenpho
     jump analysis71
@@ -1264,9 +1304,9 @@ label free71:
 label close71a:
     show thuyenpho at right:
         size(450,720)
-    tp "Thuyền trưởng, vì cuộc tấn công này, chúng ta đã không thể phóng máy bay tấn công đối phương"
+    tp "Thuyền trưởng, vì cuộc tấn công này, chúng ta đã không thể phóng máy bay tấn công đối phương."
     tp "Tại vì bây giờ đã quá 0800, tấn công đối phương bây giờ\sẽ khiến chúng ta phải hy sinh đa số máy bay trong đội của Tomonaga.\""
-    tp "Thuyền trưởng có muốn đổi quyết định không?"
+    tp "Thuyền trưởng có muốn đổi quyết định không ?"
     "danh tính của đối phương vẫn chưa biết, vị trí đối phương thì còn khả nghi."
     "1 vài máy bay dự trũ vừa thay đổi vũ khí nên chỉ còn 64/78 máy bay tấn công được."
     "Nhưng trong chiến tranh tàu sân bay, ai tấn công trước người đấy thắng."
@@ -1282,7 +1322,8 @@ label close71b:
 
 
 label a727374: # phóng máy bay sau khi Tomohaga hạ cánh + phóng máy bay tấn công ngay lập tức + 0810 Báo cáo tình hình
-    scene plane6 with fade
+    scene plane6 with fade:
+        size(1300,720)
     noti "Phát hiện máy bay thả bom đối phương trên cao 200 dặm"
     "Với độ cao này, súng phòng không của chúng ta không có tác dụng gì cả."
     menu:
@@ -1291,12 +1332,13 @@ label a727374: # phóng máy bay sau khi Tomohaga hạ cánh + phóng máy bay t
 
 label a75: # Chuẩn bị né
     "0820!"
-    scene soryuu with fade
-    "Bọn chúng đã tấn công Soryuu, Hiryuu và Akagi"
-    "Nhưng ở trên độ cao đó, độ chính xác của đối phương cũng bị giảm"
-    "Hạm đội của chúng ta không bị sát thương nào"
-    noti "Thông báo! Thông tin đưa về từ máy bay trinh sát Tone 4"
-    "Có lẽ chiếc tàu sân bay kia đi theo hạm đội chúng"
+    scene soryuu with fade:
+        size(1300,720)
+    "Bọn chúng đã tấn công Soryuu, Hiryuu và Akagi."
+    "Nhưng ở trên độ cao đó, độ chính xác của đối phương cũng bị giảm."
+    "Hạm đội của chúng ta không bị sát thương nào."
+    noti "Thông báo! Thông tin đưa về từ máy bay trinh sát Tone 4."
+    "Có lẽ chiếc tàu sân bay kia đi theo hạm đội chúng."
     hide thuyenpho
     jump analysis75
     jump choose75
@@ -1333,39 +1375,44 @@ label close75a:
     "Danh tính đối phương đã được xác nhận."
     "Với tàu sân bay, đối phương có thể tấn công bất cứ lúc nào."
     "Chúng ta phải tấn công trước! Nhưng lưu ý, tấn công lúc này sẽ chắc chắn mất hết 97 máy bay của đội Tomonaga."
-    "Và chúng ta sẽ không có máy bay tiêm kích bảo kê máy bay thả bom vì chúng đã được sử dụng để bảo vệ hạm đội"
+    "Và chúng ta sẽ không có máy bay tiêm kích bảo kê máy bay thả bom vì chúng đã được sử dụng để bảo vệ hạm đội."
     "thế nên tỉ lệ chúng ta có thể tấn công đối phương an toàn là rất thấp."
     jump analysis75
 
 label close75b:
     show thuyenpho at right:
         size(450,720)
-    "Không máy bay nào của Tomonaga phải bị mất"
+    "Không máy bay nào của Tomonaga phải bị mất."
     "có đủ thời gian để chuẩn bị vũ khí trên máy bay nên có thể tấn công với cả 78 máy bay."
     jump analysis75
 
 label a7677: # phóng máy bay sau khi Tomohaga hạ cánh + phóng máy bay tấn công đối phương ngay lập tức
     "0825!"
-    scene ship12 with fade
+    scene ship12 with fade:
+        size(1300,720)
     noti "Thông báo! Phát hiện ống nhòm của tàu ngầm đối phương!"
     "Tàu khu trục Arashi đã được cử để đi săn nó."
-    scene black with fade
+    scene black with fade:
+        size(1300,720)
     "0827!"
-    scene ship13 with fade
-    noti "Phát hiện máy bay thả bom địch ở phía Đông Nam"
+    scene ship13 with fade:
+        size(1300,720)
+    noti "Phát hiện máy bay thả bom địch ở phía Đông Nam."
     menu:
         "Tất cả chuẩn bị súng phòng không":
             jump a78
 
 label a78: # 0827 tất cả chuẩn bị súng phòng không
     "0839!"
-    scene ship19 with fade
+    scene ship19 with fade:
+        size(1300,720)
     menu:
         "Báo cáo tình hình":
             jump a79
 
 label a79: # 0839 báo cáo tình hình
-    scene plane11 with fade
+    scene plane11 with fade:
+        size(1300,720)
     hide thuyenpho
     jump analysis79
     jump choose79
@@ -1400,7 +1447,7 @@ label close79a:
     show thuyenpho at right:
         size(450,720)
     "Con tàu ngầm đó vẫn là mối đe dọa lớn, một ngư lôi từ tàu ngầm đó có thể đánh chìm cả tàu sân bay."
-    " Arashi sẽ trở lại sau khi tiêu diệt được tàu  ngầm hoặc là khi nó đi xa quá"
+    " Arashi sẽ trở lại sau khi tiêu diệt được tàu  ngầm hoặc là khi nó đi xa quá."
     jump analysis79
 
 label close79b:
@@ -1450,21 +1497,22 @@ label close80a:
     "Với tàu sân bay, địch có thể tấn công bất cứ lúc nào."
     "Chúng ta phải tấn công trước!"
     "Nhưng lưu ý, tấn công lúc này sẽ chắc chắn mất hết 97 máy bay của đội Tomonaga."
-    "Và chúng ta sẽ không có máy bay tiêm kích bảo vệ máy bay thả bom vì chúng đã được sử dụng để bảo vệ hạm đội"
+    "Và chúng ta sẽ không có máy bay tiêm kích bảo vệ máy bay thả bom vì chúng đã được sử dụng để bảo vệ hạm đội."
     "thế nên tỉ lệ chúng ta có thể tấn công đối phương an toàn là rất thấp."
     jump analysis80
 
 label close80b:
     show thuyenpho at right:
         size(450,720)
-    "Đội máy bay của Tomonaga đã quay trở lại an toàn"
-    "Chúng ta không thể nhìn họ hy sinh máy bay được. "
-    "Chúng ta còn thời gian để nạp nhiên liệu và đạn và tấn công sau khi đón họ trở về"
+    "Đội máy bay của Tomonaga đã quay trở lại an toàn."
+    "Chúng ta không thể nhìn họ hy sinh máy bay được."
+    "Chúng ta còn thời gian để nạp nhiên liệu và đạn và tấn công sau khi đón họ trở về."
     jump analysis80
 
 label a82: # sau khi Tomohaga hạ cánh
     "0910!"
-    scene ship8 with fade
+    scene ship8 with fade:
+        size(1300,720)
     "Tất cả các phi công trong đội máy bay của Tomonaga đã hạ cánh an toàn."
     "Bây giờ chúng ta phải tính nước đi tiếp theo."
     hide thuyenpho
@@ -1510,16 +1558,18 @@ label close82b:
     jump analysis82
 
 label a818384: # tấn công hạm đội đối phương + tấn công midway + phóng máy bay tấn công hạm đội đối phương ngay lập tức
-    "Chúng ta chỉ cần 45 phút là sẽ phóng được hàng loạt máy bay hùng mạnh"
-    "0918"
-    scene ship16 with fade
+    "Chúng ta chỉ cần 45 phút là sẽ phóng được hàng loạt máy bay hùng mạnh."
+    "0918!"
+    scene ship16 with fade:
+        size(1300,720)
     noti "Thông báo, chúng ta đang bị tấn công bởi máy bay thả ngư lôi Mĩ từ phía Bắc."
     menu:
         "Dừng việc phóng máy bay và chuẩn bị súng phòng không":
             jump a85
 
 label a85: # Dừng việc phóng máy bay và chuẩn bị súng phòng không
-    scene ship4 with fade
+    scene ship4 with fade:
+        size(1300,720)
     "Máy bay thả bom đối phương không hề có máy bay chiến đấu bảo vệ."
     "Bọn nó sẽ chỉ là mồi nhử cho các máy bay của chúng ta thôi."
     menu:
@@ -1530,7 +1580,7 @@ label a86: # Báo cáo tình hình
     "0937!"
     scene phongdochoi with fade:
         size(1300,720)
-    dmr "Trong số 15 máy bay đối phương tấn công, chỉ có 3 cái đến gần được con tàu Soryuu của chúng ta, và chỉ có 1 máy bay địch bắn được ngư lôi, nhưng mà trượt"
+    dmr "Trong số 15 máy bay đối phương tấn công, chỉ có 3 cái đến gần được con tàu Soryuu của chúng ta, và chỉ có 1 máy bay địch bắn được ngư lôi"
     menu:
         "Tiếp tục phóng máy bay tấn công":
             jump a87
@@ -1560,24 +1610,27 @@ label a89: # Báo cáo tình hình
         size(1300,720)
     show thuyenpho at right:
         size(450,720)
-    tp "Bọn chúng đã tấn công con tàu Kaga của chúng ta, nhưng không phát nào trúng, chúng ta chỉ bị mất 1 từ máy bay Zero"
+    tp "Bọn chúng đã tấn công con tàu Kaga của chúng ta, nhưng không phát nào trúng, chúng ta chỉ bị mất 1 từ máy bay Zero."
     menu:
         "Tiếp tục phóng máy bay tấn công":
             jump a90
 
 label a90: # tiếp tục phóng máy bay tấn công
     "1010"
-    scene ship19 with fade
+    scene ship19 with fade:
+        size(1300,720)
     noti "Phát hiện máy bay thả ngư lôi địch từ phía đông nam!"
     "Đây quả là một trò đùa, hơn 50 phút rồi có 3 đợt tấn công liên tiếp, trì hoãn đợt tấn công của chúng ta."
     "Điều này chứng tỏ đối phương phải có hơn 1 tàu sân bay."
     "Nhưng từ nãy đến giờ chỉ có máy bay thả ngư lôi, vậy máy bay thả bom của Mĩ đâu?"
-    scene black with fade
+    scene black with fade:
+        size(1300,720)
     "1020"
-    scene ship19 with fade
+    scene ship19 with fade:
+        size(1300,720)
     "Tin xấu! Đợt tấn công lần này của kẻ địch có máy bay chiến đấu."
-    "Quân địch đang dùng chiến thuật di chuyển mới, và rất nhiều máy bay zero của chúng ta đang bị bắn hạ"
-    "Điều này khiến cho tất cả máy bay zero đều đã ra ngăn cản máy bay địch, khiến hạm đội chúng ta không hề có máy bay bảo vệ trên đầu"
+    "Quân địch đang dùng chiến thuật di chuyển mới, và rất nhiều máy bay zero của chúng ta đang bị bắn hạ."
+    "Điều này khiến cho tất cả máy bay zero đều đã ra ngăn cản máy bay địch, khiến hạm đội chúng ta không hề có máy bay bảo vệ trên đầu."
     hide thuyenpho
     jump analysis90
     jump choose90
@@ -1611,7 +1664,7 @@ label free90:
 label close90a:
     show thuyenpho at right:
         size(450,720)
-    "Chúng ta cần có máy bay bảo vệ hạm đội trên\đầu đề phòng trường hợp mình bị tấn công từ hướng khác\""
+    "Chúng ta cần có máy bay bảo vệ hạm đội trên\đầu đề phòng trường hợp mình bị tấn công từ hướng khác.\""
     jump analysis90
 
 label close90b:
@@ -1620,23 +1673,26 @@ label close90b:
     "Chúng ta cần tiêu diệt đối thủ trước khi chúng nó có thể lại gần, cách này sẽ hiệu quả hơn."
     jump analysis90
 label a9192: # gọi máy bay quay lại bảo vệ + để tất cả máy bay tập trung tấn công máy bay địch
-    scene atakagi1 with fade
-    noti " Thông báo! Gần 17 máy bay thả bom Mĩ đang tiến tới từ cả phía Bắc và phía Nam,\chúng nó đã tiến tới quá gần mà không bị phát hiện và đang bắt đầu tấn công hạm đội của ta\""
-    "Chúng ta không hề có máy bay nào sẵn sàng bảo vệ cả"
-    scene black with fade
-    "1026"
+    scene atakagi1 with fade:
+        size(1300,720)
+    noti " Thông báo! Gần 17 máy bay thả bom Mĩ đang tiến tới từ cả phía Bắc và phía Nam,\chúng nó đã tiến tới quá gần mà không bị phát hiện và đang bắt đầu tấn công hạm đội của ta.\""
+    "Chúng ta không hề có máy bay nào sẵn sàng bảo vệ cả."
+    scene black with fade:
+        size(1300,720)
+    "1026!"
     menu:
         "báo cáo tình hình":
             jump a93
 label a93: # Báo cáo tình hình
-    scene plane15 with fade
+    scene plane15 with fade:
+        size(1300,720)
     show thuyenpho at right:
         size(480,720)
     tp "Tất cả tàu sân bay của chúng ta đều có vũ khí, máy bay và nhiên liệu ở dưới sàn bay."
-    tp "Và chỉ với 1 quả bom, nó đã khiến cả con tàu Akagi bị cháy"
+    tp "Và chỉ với 1 quả bom, nó đã khiến cả con tàu Akagi bị cháy."
     tp "Số phận của Kaga, Soryuu đều cũng thế."
-    tp "Chúng ta chỉ còn Hiryuu đã né được ngư lôi từ máy bay địch và còn hoạt động được"
-    tp "Đô đốc, con tàu Akagi không thể bị cứu được nữa.\Thuyền trưởng hãy chuyển sang con tàu tuần dương nagara để tiếp tục chỉ huy trận chiến\""
+    tp "Chúng ta chỉ còn Hiryuu đã né được ngư lôi từ máy bay địch và còn hoạt động được."
+    tp "Đô đốc, con tàu Akagi không thể bị cứu được nữa.\Thuyền trưởng hãy chuyển sang con tàu tuần dương nagara để tiếp tục chỉ huy trận chiến.\""
     hide thuyenpho
     jump analysis93
     jump choose93
@@ -1658,7 +1714,7 @@ label analysis93:
             jump close93a
         "Đuổi theo":
             jump close93b
-        "Đã phân tích xong" :
+        "Đã phân tích xong":
             jump choose93
 label free93:
     menu:
@@ -1669,13 +1725,13 @@ label free93:
 label close93a:
     show thuyenpho at right:
         size(450,720)
-    "Tình hình đang là 3 vs 1, Hiyruu là tàu sân bay duy \nhất của Kido Butai, và chúng ta phải bảo vệ cô ấy với mọi giá.\""
+    "Tình hình đang là 3 vs 1, Hiyruu là tàu sân bay duy nhất của Kido Butai, và chúng ta phải bảo vệ cô ấy với mọi giá."
     jump analysis93
 
 label close93b:
     show thuyenpho at right:
         size(450,720)
-    "Lựa chọn duy nhất mà mọi người Nhật Bản có thể chọn, chúng ta vẫn còn có cơ hội"
+    "Lựa chọn duy nhất mà mọi người Nhật Bản có thể chọn, chúng ta vẫn còn có cơ hội."
     "Chúng ta có thể đuổi kịp trong khoảng thời gian ngắn."
     jump analysis93
 
@@ -1690,9 +1746,13 @@ label a95: # đuổi theo
     show thuyenpho at right:
         size(450,720)
     tp "Tuyệt vời! Để tôi bảo các phi công của chúng ta chuẩn bị."
-    show black with fade
+    scene black with fade
     "1054!"
-    "Chúng ta đã đuổi kịp hạm đội đối phương"
+    scene phongdochoi with fade:
+        size(1300,720)
+    show thuyenpho at right:
+        size(450,720)
+    tp "Chúng ta đã đuổi kịp hạm đội đối phương."
     menu:
         "Phóng máy bay phản công":
             jump a96
@@ -1743,7 +1803,7 @@ label a103: # báo cáo tình hình
         size(1300,720)
     show thuyenpho at right:
         size(480,720)
-    tp "Thông báo từ đội máy bay vừa quay trở lại"
+    tp "Thông báo từ đội máy bay vừa quay trở lại."
     "Chỉ có 5/13 máy bay thả bom Val trở lại, 1/4 máy bay zero trở lại. "
     "Nếu tiếp tục như thế này, chúng ta có thể sẽ hết sạch máy bay cho đến tối mất."
     tp "Đổi lại, chúng ta chỉ bắt hạ được 1 máy bay Wildcat từ Mĩ."
@@ -1758,15 +1818,22 @@ label a104: # rút lui
         "Ending 3 (live)":
             jump ending3
 ########################################################################################################################
+label xyzxyz: # script của Khánh
+    "Không có gì"
+    return
+label ending1: # Vũ Cường
+    "Không có gì"
+    return
+label ending2: # Vũ Cường
+    "Không có gì"
+    return
+    
+label ending3: # Vũ Cường
+    "Không có gì"
+    return 
+    
+label ending4: # Vũ Cường
+    "Không có gì"
+    return
+    
 #ALL ENDING IS HERE
-label xyzxyz:
-    "Không có gì"
-label ending1:
-    "Không có gì"
-label ending2:
-    "Không có gì"
-label ending3:
-    "Không có gì"
-label ending4:
-    "Không có gì"
-# còn 2 phần báo cáo của Khánh
