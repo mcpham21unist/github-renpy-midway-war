@@ -89,7 +89,7 @@ label a5: # tấn công Midway
     show thuyenpho at right:
         size(450,720)
     tp "Đô đốc! Một máy bay Mĩ Catalina PBY đã phát hiện\ra hạm đội của chúng ta. Chúng ta đã mất yếu tố bất ngờ.\""
-    tp "Tệ hơn nữa, máy bay thả bom của chúng ta chưa đến đảo Midway,\có nghĩa là máy bay Mĩ ở đảo Midway có thể tấn công hạm đội của t bất cứ lúc nào.\""
+    tp "Tệ hơn nữa, máy bay thả bom của chúng ta chưa đến đảo Midway,\ có nghĩa là máy bay Mĩ ở đảo Midway có thể tấn công hạm đội của ta bất cứ lúc nào.\""
     tp "Chúng ta phải làm sao đây."
     hide thuyenpho
     jump analysis5
@@ -149,7 +149,7 @@ label a6: # "0532" cho máy bay bảo vệ trước khi bị tấn công
     "Bọn Mĩ không thể dũng cảm như thế này được."
     "Chắc chắn là do bộ điều khiển của nó đã bị hỏng."
     "Cái máy bay đó đã đâm trượt tàu của mình, nhưng vài thủy thủ đã bị thương\ Họ đã được đưa đến phòng y tế.\""
-    tp "Đô đốc! Phi công Tomonaga sau khi tấn công Midway báo rằng\chúng ta cần 1 đợt tấn công nữa mới vô hiệu hóa được hòn đảo.\""
+    tp "Đô đốc! Phi công Tomonaga sau khi tấn công Midway báo rằng\ chúng ta cần 1 đợt tấn công nữa mới vô hiệu hóa được hòn đảo.\""
     tp "Hơn nữa, máy bay địch đang tiến tới hạm đội."
     hide thuyenpho
     jump analysis6
@@ -293,7 +293,7 @@ label a12: # Báo cáo tình hình chiến dịch đợt 1
     hide thuyenpho
     jump analysis12
     jump choose12
-    
+
 label choose12:
     show thuyenpho at right:
         size(450,720)
@@ -317,10 +317,8 @@ label analysis12:
 label free12:
     menu:
         "Tấn công bằng đội máy bay của Tomonaga":
-        tp "Rõ!"
             jump a62
         "Tấn công bằng máy bay dữ trữ":
-        tp "Rõ!"
             jump a13
 
 label close12a:
@@ -394,7 +392,7 @@ label close13b:
     jump analysis13
 label a14: # Dừng việc thay đổi vũ khí
     scene plane14 with fade
-    "1 điều tôi thấy lạ về thông báo này của Tone 4, \theo đường bay chỉ định, Tone 4 không thể đi qua hạm đội đối phương được.\""
+    "1 điều tôi thấy lạ về thông báo này của Tone 4,\theo đường bay chỉ định, Tone 4 không thể đi qua hạm đội đối phương được.\""
     "Nghĩa là Tone 4 đi sai đường, hoặc là vị trí của hạm đội bị thông báo sai."
     "Hơn nữa, “10 tàu đối phương” có thể có tàu sân bay, hoặc chỉ là tàu khu trực nhỏ."
     "Một tháng trước, tại trận đấu Biển San Hô, đô đốc Takagi đã\tấn công nhầm tàu khu trực của Mĩ thay vì tàu sân bay Mĩ. Chúng ta không thể làm lại lỗi lầm đó.\""
@@ -1827,13 +1825,13 @@ label ending1: # Vũ Cường
 label ending2: # Vũ Cường
     "Không có gì"
     return
-    
+
 label ending3: # Vũ Cường
     "Không có gì"
-    return 
-    
+    return
+
 label ending4: # Vũ Cường
     "Không có gì"
     return
-    
+
 #ALL ENDING IS HERE
