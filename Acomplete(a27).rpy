@@ -1,6 +1,7 @@
+
 label a27: # 0810 Báo cáo tình hình
     dmr "Hạm đội của chúng ta không có tổn thương gì.\1 máy bay zero đã bị mất, và đã bắn hạ được gần chục máy bay đối phương.\""
-        hide thuyenpho
+    hide thuyenpho
     jump analysis27
     jump choose27
 
@@ -17,15 +18,15 @@ label choose27:
 label analysis27:
     hide thuyenpho
     menu:
-        "Phóng máy bay tấn công ngay lập tức":   
+        "Phóng máy bay tấn công ngay lập tức":
             jump close27a
-        "Phóng máy bay tấn công sau khi đội máy bay của Tomonaga hạ cánh":     
+        "Phóng máy bay tấn công sau khi đội máy bay của Tomonaga hạ cánh":
             jump close27b
         "Đã phân tích xong" :
             jump choose27
 label free27:
     menu:
-        "Phóng máy bay tấn công ngay lập tức":   
+        "Phóng máy bay tấn công ngay lập tức":
             jump a252829
         "Phóng máy bay tấn công sau khi đội máy bay của Tomonaga hạ cánh":
             jump a252829
@@ -38,7 +39,7 @@ label close27a:
     "danh tính của đối phương vẫn chưa biết, vị trí đối phương thì còn khả nghi."
     "1 vài máy bay dự trũ vừa thay đổi vũ khí nên chỉ còn 64/78 máy bay tấn công được."
     "Nhưng trong chiến tranh tàu sân bay, ai tấn công trước người đấy thắng."
-    
+
     jump analysis27
 
 label close27b:
