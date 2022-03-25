@@ -1,5 +1,6 @@
 label a35: # cho arashi tiếp tục đuổi theo
-    scene ship2 with fade
+    scene ship2 with fade:
+        size(1300,720)
     "Tinh thần của bọn Mĩ mãnh liệt hơn chúng ta đã tưởng, nhưng kĩ năng của họ thì thật đáng xấu hổ."
     "Với tình hình này, chúng ta chắc chắn sẽ giành được chiến thắng."
     "Máy bay đồng minh phát hiện! Đó là đội máy bay của đội Tomonaga đang trở lại."
@@ -20,15 +21,15 @@ label choose35:
 label analysis35:
     hide thuyenpho
     menu:
-        "Phóng máy bay tấn công hạm đội đối phương ngay lập tức": 
+        "Phóng máy bay tấn công hạm đội đối phương ngay lập tức":
             jump close35a
-        "Phóng máy bay tấn công hạm của địch sau khi đội máy bay của Tomonaga hạ cánh":   
+        "Phóng máy bay tấn công hạm của địch sau khi đội máy bay của Tomonaga hạ cánh":
             jump close35b
         "Đã phân tích xong" :
             jump choose35
 label free35:
     menu:
-        "Phóng máy bay tấn công hạm đội đối phương ngay lập tức": 
+        "Phóng máy bay tấn công hạm đội đối phương ngay lập tức":
             jump a363839
         "Phóng máy bay tấn công hạm của địch sau khi đội máy bay của Tomonaga hạ cánh":
             jump a37
@@ -41,7 +42,7 @@ label close35a:
     "Nhưng lưu ý, tấn công lúc này sẽ chắc chắn mất hết 97 máy bay của đội Tomonaga."
     "Và chúng ta sẽ không có máy bay tiêm kích bảo vệ máy bay thả bom vì chúng đã được sử dụng để bảo vệ hạm đội"
     "Thế nên tỉ lệ chúng ta có thể tấn công đối phương an toàn là rất thấp."
-    jump analysis3
+    jump analysis35
 
 label close35b:
     show thuyenpho at right:
