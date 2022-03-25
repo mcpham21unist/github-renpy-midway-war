@@ -1,3 +1,4 @@
+
 label a6: # "0532" cho máy bay bảo vệ trước khi bị tấn công
     "0700!"
     scene ship10 with fade
@@ -17,7 +18,7 @@ label a6: # "0532" cho máy bay bảo vệ trước khi bị tấn công
     jump choose6
 
 label choose6:
-     show thuyenpho at right:
+    show thuyenpho at right:
         size(450,720)
     tp "Đô đốc đã có lựa chọn chưa ạ ?"
     hide thuyenpho
@@ -30,20 +31,20 @@ label choose6:
 label analysis6:
     hide thuyenpho
     menu:
-        "Phóng máy bay bảo vệ": 
+        "Phóng máy bay bảo vệ":
             jump close6a
-        "Không phóng thêm máy bay, tập trung né":    
+        "Không phóng thêm máy bay, tập trung né":
             jump close6b
         "Đã phân tích xong":
             jump choose6
 label free6:
     menu:
-        "Phóng máy bay bảo vệ": 
+        "Phóng máy bay bảo vệ":
             jump a9
-        "Không phóng thêm máy bay, tập trung né": 
+        "Không phóng thêm máy bay, tập trung né":
             jump a8
 label close6a:
-     show thuyenpho at right:
+    show thuyenpho at right:
         size(450,720)
     tp "Đây là một hành động rất nguy hiểm, khi đang bị tấn công, tàu sân bay không thể phóng thêm máy bay mới"
     tp "Tôi chúc đô đốc may mắn cho cuộc tấn công sắp tới"
