@@ -1,4 +1,4 @@
-label start:
+
 label a7: # "0532" ko cho thêm máy bay bảo vệ trước khi bị tấn công
     "0700!"
     scene ship10 with fade
