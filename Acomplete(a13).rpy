@@ -22,11 +22,11 @@ label analysis13:
     menu:
         "Dừng việc thay đổi vũ khí":
             jump close13a
-        "Tiếp tục thay đổi vũ khí để tấn công Midway":    
+        "Tiếp tục thay đổi vũ khí để tấn công Midway":
             jump close13b
         "Đã phân tích xong" :
             jump choose13
-label fre1e3:
+label free13:
     menu:
         "Dừng việc thay đổi vũ khí":
             jump a14
