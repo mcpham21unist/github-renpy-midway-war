@@ -1,6 +1,8 @@
+
 label a30: # Chuẩn bị né
     "0820!"
-    scene soryuu with fade
+    scene soryuu with fade:
+        size(1300,720)
     "Bọn chúng đã tấn công Soryuu, Hiryuu và Akagi"
     "Nhưng ở trên độ cao đó, độ chính xác của đối phương cũng bị giảm"
     "Hạm đội của chúng ta không bị sát thương nào"
@@ -23,17 +25,17 @@ label choose30:
 label analysis30:
     hide thuyenpho
     menu:
-        "Phóng máy bay tấn công hạm đội đối phương ngay lập tức": 
+        "Phóng máy bay tấn công hạm đội đối phương ngay lập tức":
             jump close30a
-        "Phóng máy bay tấn công hạm đội đối phương sau khi đội máy bay của Tomonaga hạ cánh":    
+        "Phóng máy bay tấn công hạm đội đối phương sau khi đội máy bay của Tomonaga hạ cánh":
             jump close30b
         "Đã phân tích xong" :
             jump choose30
 label free30:
     menu:
-        "Phóng máy bay tấn công hạm đội đối phương ngay lập tức": 
+        "Phóng máy bay tấn công hạm đội đối phương ngay lập tức":
             jump a3132
-        "Phóng máy bay tấn công hạm đội đối phương sau khi đội máy bay của Tomonaga hạ cánh": 
+        "Phóng máy bay tấn công hạm đội đối phương sau khi đội máy bay của Tomonaga hạ cánh":
             jump a3132
 label close30a:
     show thuyenpho at right:
@@ -51,5 +53,3 @@ label close30b:
     "Không máy bay nào của Tomonaga phải bị mất"
     "có đủ thời gian để chuẩn bị vũ khí trên máy bay nên có thể tấn công với cả 78 máy bay."
     jump analysis30
-
-
