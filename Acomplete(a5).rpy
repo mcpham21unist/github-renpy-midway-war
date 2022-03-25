@@ -5,7 +5,8 @@ label a5: # tấn công Midway
     "Hãy chúc các phi công trẻ của chúng ta trở lại an toàn."
     scene black with fade
     "0500!"
-    scene plane with fade
+    scene plane with fade:
+        size(1300,720)
     "Thông báo! Máy bay trinh thám Tone 4 vì sự cố kĩ thuật đã bị phóng muộn mất 30 phút."
     scene black with fade
     "0532!"
@@ -19,12 +20,12 @@ label a5: # tấn công Midway
     jump analysis5
     jump choose5
 
-label choose5: 
+label choose5:
     show thuyenpho at right:
         size(450,720)
-        tp: "Đô đốc đã có lựa chọn chưa ạ ?"
-        hide thuyenpho
-        menu:
+    tp "Đô đốc đã có lựa chọn chưa ạ ?"
+    hide thuyenpho
+    menu:
         "Chưa ta cần phân tích thêm":
             jump analysis5
         "Được rồi":
@@ -35,7 +36,7 @@ label analysis5:
     menu:
         "Không cho thêm máy bay bảo vệ":
             jump close5a
-        "Cho thêm máy bay bảo vệ":     
+        "Cho thêm máy bay bảo vệ":
             jump close5b
         "Đã phân tích xong" :
             jump choose5
@@ -50,9 +51,9 @@ label close5a:
     show thuyenpho at right:
         size(450,720)
     tp "Chúng ta đã có nhiều máy bay đang bay trên đầu để bảo vệ hạm đội."
-    tp "Hơn nữa, đối phương không thể phản ứng nhanh đến thế được" 
-    tp "Chúng ta sẽ có thừa thời gian để chuẩn bị một khi phát hiện máy bay địch"  
-     jump analysis5
+    tp "Hơn nữa, đối phương không thể phản ứng nhanh đến thế được"
+    tp "Chúng ta sẽ có thừa thời gian để chuẩn bị một khi phát hiện máy bay địch"
+    jump analysis5
 
 label close5b:
     show thuyenpho at right:
