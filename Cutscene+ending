@@ -1,0 +1,182 @@
+# cutscene 1
+label start:
+    play music backmusic loop
+
+    scene bg_pearlmap with fade:
+        size(1920, 1080)
+
+    "Ngày 7 tháng 12 năm 1941. Trân Châu Cảng bất ngờ bị quân đội Nhật tập kích."
+
+    window hide
+    $ renpy.music.set_pause(True, channel = "music")
+
+    show usdead with moveinleft:
+        size(1920, 1080)
+
+    play sound fdr_infamy
+
+    "Câu nói nổi tiếng của tổng thống Mỹ F.D.Roosevelt trong buổi họp sau trận chiến:
+     \"Yesterday, December 7th, 1941, a date which will live in infamy.\"
+    "
+
+    window hide
+    pause .5
+
+    $ renpy.music.set_pause(False, channel = "music")
+    $ renpy.music.set_pause(True, channel = "sound")
+
+    scene bg_jpmap with dissolve:
+        size(1920, 1080)
+
+    "6 tháng sau trận Trân Châu Cảng, Đế quốc Nhật Bản đã hoành hành khắp châu Á và Thái Bình
+    Dương và chiếm được nhiều vùng đất nhiều khoáng sản."
+
+    window hide
+
+    show lexingtondead with moveinleft:
+        size(1920, 1080)
+
+    "Ngày 4 tháng 5 năm 1942, trận biển San Hô (Coral Sea). Nhật Bản bắn chìm tàu sân bay USS
+    Lexington."
+
+    pause .5
+
+    scene bg_usmap with dissolve:
+        size(1920, 1080)
+
+    "Tuy vậy, kẻ thù lớn nhất của Nhật Bản, Hoa Kỳ, chưa có dấu hiệu đầu hàng."
+
+    show bg_usproduction with fade:
+        size(1920, 1080)
+
+    "Nhật Bản cần phải kết thúc cuộc chiến trước khi sức mạnh công nghiệp của Mỹ đánh bại nó."
+
+    window hide
+
+    scene bg_midwaymap with fade:
+        size(1920, 1080)
+
+    "Muốn như vậy, Nhật cần chiến thắng một cuộc tấn công quyết định, một cuộc tấn công mà
+    sẽ khiến Mĩ phải đến bàn thỏa thuận."
+
+    show midway_crop with moveinright:
+        size(1920, 1080)
+
+    pause 1.0
+    jump ending_1
+
+# ending_1
+label ending_1:
+    scene akagi_sunk with dissolve:
+        size(1920, 1080)
+
+    "Chiến dịch Midway thất bại nặng nề. Bạn  bị đuổi khỏi chức vụ đô đốc."
+    "Không có sự trợ giúp từ tàu sân bay, quân đội Nhật Bản phải rút lui."
+
+    window hide
+    pause .5
+
+    scene bg_american_warship with dissolve:
+        size(1920, 1080)
+
+    "Trong khi đó, người Mỹ vẫn còn giữ được hòn đảo Midway và hạm đội tàu sân bay của họ."
+
+    window hide
+    pause .5
+
+    scene allied_counterattack with dissolve:
+        size(1920, 1080)
+
+    "Sau chiến thắng tuyệt đối tại Midway, vài tháng sau, quân đội Mỹ mở cuộc phản công đầu tiên
+    của quân đội Đồng Minh trên khắp Thái Bình Dương."
+
+    window hide
+    pause .5
+
+    jump ending_2
+
+# ending_2
+label ending_2:
+    scene akagi_sunk with dissolve:
+        size(1920, 1080)
+
+    "Máy bay đối phương đâm thẳng vào phòng chỉ huy và giết chết bạn."
+    "Con tàu Akagi đã quá tập trung vào việc phóng máy bay nên không thể phản ứng kịp với
+    cuộc tấn công này. Tuy vậy đội sửa chữa đã kịp thời cứu giúp Akagi khỏi bị chìm."
+
+    window hide
+    pause .5
+
+    scene bg_ijn_hiryuu with dissolve:
+        size(1920, 1080)
+
+    show general_yamaguchi with moveinright:
+        xalign 1.0
+        yalign 0.0
+
+    "Không có đô đốc chỉ huy, hạm đội trưởng Yamaguchi của tàu Hiryuu lên nắm quyền
+    chỉ huy hạm đội. Yamaguchi lệnh cho tàu tiếp tục tấn công Midway."
+
+    window hide
+    pause .5
+
+    scene jp_flag with dissolve:
+        size(1920, 1080)
+
+    "Sự thành công của cuộc tiến công này quyết định trực tiếp đến số phận của Nhật Bản."
+
+    window hide
+    pause .5
+
+    jump ending_3
+
+# ending_3
+label ending_3:
+    scene bg_midway with dissolve:
+        size(1920, 1080)
+
+    "Về phía Nhật Bản, đây được coi là một thắng lợi chiến lược khi đánh chìm nhiều khí tài
+    địch, đặc biệt là các tàu sân bay."
+    "Tuy vậy quân đội Mỹ vẫn bảo vệ được hòn đảo Midway, và đây được coi là một thắng lợi
+    chiến thuật cho quân đội Mỹ."
+
+    window hide
+    pause .5
+
+    scene bg_american_warship with dissolve:
+        size(1920, 1080)
+
+    "Với sức mạnh sản xuất của Mỹ, họ đã thay thế tất cả tàu sân bay bị mất chỉ trong vài tháng."
+
+    window hide
+    pause .5
+
+    scene allied_counterattack with dissolve:
+        size(1920, 1080)
+
+    "Quân đội Mỹ bắt đầu phản công trên khắp mặt trận Thái Bình Dương."
+
+    window hide
+    pause .5
+
+    jump ending_4
+
+# ending_4
+label ending_4: # true history
+    scene bg_kido_butai with dissolve:
+        size(1920, 1080)
+
+    "Quân đội Nhật Bản thất bại nặng nề. Hạm đội Kido Butai bị huỷ diệt hoàn toàn, hải
+    quân Nhật Bản tổn thất nghiêm trọng."
+
+    window hide
+    pause .5
+
+    scene allied_counterattack with dissolve:
+        size(1920, 1080)
+
+    "Sau chiến thắng tuyệt đối tại Midway, quân đội Mỹ bắt đầu mở cuộc phản công trên khắp
+    mặt trận Thái Bình Dương."
+
+    window hide
+    pause .5
