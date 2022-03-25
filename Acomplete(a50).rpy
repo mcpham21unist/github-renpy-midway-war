@@ -1,5 +1,6 @@
 label a50: # tháo chạy bằng xuồng và chỉ huy tiếp từ tàu Nagara
-    scene ship5 with fade
+    scene ship5 with fade:
+        size(1300,720)
     show thuyenpho at right:
         size(480,720)
     tp "Chào mừng thuyền trưởng trên con tàu tuần dương hạng nhẹ Nagara, kỳ hạm tạm thời của chúng ta."
@@ -12,7 +13,7 @@ label a50: # tháo chạy bằng xuồng và chỉ huy tiếp từ tàu Nagara
     tp "Nhưng tất cả viện trợ này đang ở rất xa chúng ta và sẽ không có thể đến kịp thời gian được"
     tp "Tại vì hạm đội đối phương có vẻ như đang đi theo hướng Đông Nam,\ và đang tăng khoảng cách với mình. Thế nên chỉ có Hiryuu là có thể tấn công thôi\""
     tp "Cả tương lai của Nhật Bản đang đặt trên vai của thuyền trưởng."
-        hide thuyenpho
+    hide thuyenpho
     jump analysis50
     jump choose50
 
@@ -29,17 +30,17 @@ label choose50:
 label analysis50:
     hide thuyenpho
     menu:
-        "Rút lui":   
+        "Rút lui":
             jump close50a
-        "Đuổi theo":     
+        "Đuổi theo":
             jump close50b
         "Đã phân tích xong" :
             jump choose50
 label free50:
     menu:
-        "Rút lui":   
+        "Rút lui":
             jump a52
-        "Đuổi theo": 
+        "Đuổi theo":
             jump a51
 label close50a:
     show thuyenpho at right:
