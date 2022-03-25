@@ -23,9 +23,9 @@ label choose1819:
 label analysis1819:
     hide thuyenpho
     menu:
-        "Phóng máy bay tấn công ngay lập tức":     
+        "Phóng máy bay tấn công ngay lập tức":
             jump close1819a
-        "Đợi thời gian nghĩ thêm":    
+        "Đợi thời gian nghĩ thêm":
             jump close1819b
         "Phóng máy bay tấn công hạm đội đối phương sau khi Tomohaga hạ cánh":
             jump close1819c
@@ -33,9 +33,9 @@ label analysis1819:
             jump choose1819
 label free1819:
     menu:
-        "Phóng máy bay tấn công ngay lập tức":  
+        "Phóng máy bay tấn công ngay lập tức":
             jump a2122
-        "Đợi thời gian nghĩ thêm":  
+        "Đợi thời gian nghĩ thêm":
             jump a2122
         "Phóng máy bay tấn công hạm đội đối phương sau khi Tomohaga hạ cánh":
             jump a161723
@@ -52,6 +52,7 @@ label close1819b:
         size(450,720)
     "Không máy bay nào của Tomonaga phải bị mất, có đủ thời gian để\chuẩn bị vũ khí trên máy bay nên có thể tấn công với cả 78 máy ba\""
     jump analysis1819
+
 label close1819c:
     show thuyenpho at right:
         size(450,720)
