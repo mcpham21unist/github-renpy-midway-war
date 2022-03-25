@@ -1,3 +1,4 @@
+label start:
 label a7: # "0532" ko cho thêm máy bay bảo vệ trước khi bị tấn công
     "0700!"
     scene ship10 with fade
@@ -6,10 +7,10 @@ label a7: # "0532" ko cho thêm máy bay bảo vệ trước khi bị tấn côn
     tp "Đô đốc! Phi công Tomonaga sau khi tấn công Midway báo rằng\chúng ta cần 1 đợt tấn công nữa mới vô hiệu hóa được hòn đảo.\""
     tp "Hơn nữa, máy bay địch đang tiến tới hạm đội"
     hide thuyenpho
-    hide analysis7
-    hide choose7
+    jump analysis7
+    jump choose7
 
-    label choose7:
+label choose7:
     show thuyenpho at right:
         size(450,720)
     tp "Đô đốc đã có lựa chọn chưa ạ ?"
@@ -22,18 +23,18 @@ label a7: # "0532" ko cho thêm máy bay bảo vệ trước khi bị tấn côn
 label analysis7:
     hide thuyenpho
     menu:
-        "Phóng máy bay bảo vệ": 
+        "Phóng máy bay bảo vệ":
             jump close7a
-        "Không phóng thêm máy bay, tập trung né":     
+        "Không phóng thêm máy bay, tập trung né":
             jump close7b
         "Đã phân tích xong" :
             jump choose7
 
 label free7:
     menu:
-        "Phóng máy bay bảo vệ":    
+        "Phóng máy bay bảo vệ":
             jump a9
-        "Không phóng thêm máy bay, tập trung né": 
+        "Không phóng thêm máy bay, tập trung né":
             jump a8
 label close7a:
     show thuyenpho at right:
@@ -45,9 +46,6 @@ label close7a:
 label close7b:
     show thuyenpho at right:
         size(450,720)
-    tp "Khi đang bị tấn công, các tàu sân bay tuyệt đối không được phóng máy bay mới," 
+    tp "Khi đang bị tấn công, các tàu sân bay tuyệt đối không được phóng máy bay mới,"
     tp "Vì điều này sẽ làm giảm sự cơ động của tàu sân bay, và khiến tàu sân bay dễ bị cháy nổ hơn"
     jump analysis7
-
-
-    
